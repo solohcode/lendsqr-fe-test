@@ -1,24 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, RouteProps } from 'react-router-dom';
+import NotFound from './pages/404';
+import Login from './pages/login';
+import Users from './pages/users';
+import User from './pages/user';
 
 function App() {
+
+  const routes: RouteProps[] = [
+    {
+      path: "*",
+      element: <NotFound />
+    },
+    {
+      path: "/",
+      element: <Login />
+    },
+    {
+      path: "/users",
+      element: <Users />
+    },
+    {
+      path: "/user/:id",
+      element: <User />
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className='text-white text-9xl'>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link !text-white"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full min-h-screen">
+      <Routes>
+        {routes.map(({path, element}) => (
+          <Route
+            key={path}
+            path={path}
+            element={element}
+          />
+        ))}
+      </Routes>
     </div>
   );
 }
