@@ -26,7 +26,7 @@ function Login() {
   }
   return (
     <div className='w-full h-screen grid grid-cols-1 md:grid-cols-2'>
-      <div className='w-full md:h-full px-5 pt-10 md:p-10 lg:p-20 relative'>
+      <div className='w-full h-[5vh] md:h-full px-5 pt-10 md:p-10 lg:p-20 relative'>
         <div>
           <img className='mx-auto md:mx-0' alt='logo' src={logo} />
         </div>

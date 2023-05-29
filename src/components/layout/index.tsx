@@ -27,7 +27,7 @@ function Layout({
       <Header open={open} setOpen={setOpen} />
       <div className='w-full flex pt-20'>
         <SideBar open={open} setOpen={setOpen} />
-        <Button onClick={() => setOpen(!open)} size='large' className='fixed top-36 z-20 left-0 items-center !rounded-l-none !text-xl bg-teal text-white' color='#fff' icon={<AiOutlineMenu />} />
+        <Button type='primary' onClick={() => setOpen(!open)} size='large' className='fixed top-36 z-[15] left-0 items-center !rounded-l-none !text-xl bg-teal text-white' color='#fff' icon={<AiOutlineMenu />} />
         <div className='w-full md:w-[70%] lg:w-[80%] p-5 md:p-10'>
           {children}
         </div>
