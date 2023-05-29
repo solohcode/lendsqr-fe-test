@@ -1,3 +1,5 @@
+/* tailwind css requirement css and imports */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

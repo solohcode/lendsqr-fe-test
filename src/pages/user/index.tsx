@@ -95,12 +95,12 @@ function User() {
                 <p>{data?.accountNumber}/{data?.bank || "Providus Bank"}</p>
               </div>
             </div>
-            <div className='w-full inline-flex md:flex flex-nowrap overflow-x-auto justify-between items-center'>
+            <div className='w-full inline-flex md:!flex overflow-x-auto md:overflow-x-hidden !justify-between !items-center'>
               {tabItem.map((tab) => (
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`min-w-full md:w-full inline pb-3 font-medium ${textInclude(activeTab, tab.key) && "border-b border-teal text-teal"} hover:border-b hover:border-teal hover:text-teal`}
+                  className={`!min-w-[150px] md:w-full pb-3 font-medium ${textInclude(activeTab, tab.key) && "border-b border-teal text-teal"} hover:border-b hover:border-teal hover:text-teal`}
                 >
                   {tab.label}
                 </button>
